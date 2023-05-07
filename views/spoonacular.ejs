@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recepti</title>
+  </head>
+  <body>
+    <h1>Svakodnevni prijedlozi</h1>
+    <section class="pb-4 pt-4">
+      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% recipes1.forEach(recipe => { %>
+          <a target="_blank" href="<%= recipe.sourceUrl %>" class="col text-center category__link">
+            <div class="category__img category__img--large shadow">
+              <img src="<%= recipe.image %>" alt="<%= recipe.name %>" loading="lazy">
+            </div>
+            <div class="pt-1"><%= recipe.title %></div>
+          </a>
+        <% }) %>
+      </div>
+    </section>
+    <h1>Nasumični prijedlozi</h1>
+    <section class="pb-4 pt-4">
+      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% randomRecipes.forEach(recipe => { %>
+          <a target="_blank" href="<%= recipe.sourceUrl %>" class="col text-center category__link">
+            <div class="category__img category__img--large shadow">
+              <img src="<%= recipe.image %>" alt="<%= recipe.title %>" loading="lazy">
+            </div>
+            <div class="pt-1"><%= recipe.title %></div>
+          </a>
+        <% }) %>
+      </div>
+    </section>    
+    
+  </body>
+</html>

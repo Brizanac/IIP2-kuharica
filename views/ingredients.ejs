@@ -1,0 +1,23 @@
+<html>
+  <h1 class="pb-4">Pretraži po sastojcima:</h1>
+
+  <form action="/recipesByIngredients" method="GET">
+    <div class="col-12">
+      <label for="name" class="form-label">Sastojci</label><br>
+      <small>Primjer: cheese</small> 
+      <div class="ingredientList">
+        <div class="ingredeintDiv mb-1">
+          <input type="text" name="ingredients" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="button" class="btn btn-outline-primary" id="addIngredientsBtn">+ Sastojci</button>
+    </div>
+    <div></div>
+
+    <div class="col-12" style="text-align: center">
+      <button type="submit" class="btn btn-primary" id="addIngredientsBtn">Pronađi recepte</button>
+    </div>
+  </form>
+</html>
