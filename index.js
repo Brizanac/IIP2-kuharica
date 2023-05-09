@@ -29,6 +29,5 @@ app.set('view engine', 'ejs');
 const routes = require('./server/routes/recipeRoutes.js')
 app.use('/', routes);
 
-connectDB().then(() => {
 app.listen(port, ()=> console.log(`Listening to port ${port}`));
-})
+
